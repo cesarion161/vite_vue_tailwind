@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #007BFF;
+}
+
+input, textarea {
+  margin: 20px 0;
+  background-color: #fff; /* Light background */
+  color: #333; /* Dark text for readability */
+  border: 1px solid #ccc; /* Lighter border for a subtle look */
+  padding: 10px; /* Adequate padding for text */
+  border-radius: 5px; /* Rounded corners for modern look */
+  width: calc(100% - 22px); /* Adjust width as needed, accounting for padding and border */
+}
+
+input:focus, textarea:focus {
+  border-color: #007BFF; /* Highlight color when focused */
+  outline: none; /* Remove the default focus outline */
+}
+
+
+input:focus {
+  border-color: #0056b3;
+}
+
+.weather-info {
+  text-align: center;
+  border: 1px solid #007BFF;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  background-color: #fff;
+}
+
+.weather-info h2 {
+  margin: 0 0 10px 0;
+}
+
+.weather-info p {
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .weather-info {
+    width: 90%;
+  }
+
+  input {
+    width: 90%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #a3b8cb;
+    background-color: #1d1d31;
+  }
+  a:hover {
+    color: #6569b6;
+  }
+  button {
+    background-color: #232885;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+  background-color: yellow;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+  background-color: red;
+}
